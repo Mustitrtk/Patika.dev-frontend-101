@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptOdev1</title>
+    <style>
+        .logo{
+            display: block;
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+        }
+        .top{
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 5px;
+            float: none;
+        }
+        .mid{
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 5px;
+            float: none;
+        }
+        .aciklama{
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 5px;
+            float: none;
+        }
+        h2{
+            color: rgb(33, 97, 140);
+            font-style: oblique;
+            font-size: 40px;
+        }
+        h3{
+            color: rgb(33, 97, 140);
+            font-size: 25px;
+        }
+        p{
+            color: rgb(33, 97, 140);
+            font-size:large;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="https://kpm.metu.edu.tr/wp-content/uploads/2022/03/patikaLogo-2.png" alt="">
+    <div class="top">
+        <h2 class="greetings">Merhaba, Hoş Geldin</h2>
+    </div>
+    <div class="mid">
+        <h3 class="date"></h3>
+    </div>
+    <div class="aciklama">
+        <p><b>Patika.dev</b> JavaScript 1.Ödev</p>
+    </div>
+
+    <script>
+        let name = prompt("Lütfen adinizi giriniz.");
+        let greetings = document.querySelector("h2.greetings");
+        greetings.innerHTML=`Merhaba, ${name} Hos Geldiniz`;
+        let f = document.querySelector("h3.date");
+        function tarihSaat(){
+            var date = new Date();
+            var gun = ["Pazartesi","Sali","Carsamba","Persembe","Cuma","Cumartesi","Pazar"];
+            var saat = date.getHours();
+            var dakika = date.getMinutes();
+            var saniye = date.getSeconds();
+            f.innerHTML = `${saat}:${dakika}:${saniye}    ${gun[date.getDay()-1]}`;
+        }
+        setInterval(tarihSaat,1000)
+    </script>
+</body>
+</html>
