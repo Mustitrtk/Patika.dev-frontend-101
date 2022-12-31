@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickCounter</title>
+    <style>
+        #board{
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100px;
+            width:200px;
+            height:200px;
+            background-color: rgb(159, 32, 65);
+            text-align: center;
+        }
+        #board:focus{
+            width: 260px;
+        }
+        #sub{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(255, 165, 188);">
+    <div id="sub"><h1>Click it</h1></div>
+    <div id="board"><h2 id="count"></h2></div>
+
+    <script>
+        let count=0;
+        let boardDOM = document.querySelector('#board');
+        let countDOM = document.querySelector('#count');
+        boardDOM.addEventListener("click",inc);
+        function inc(){
+            count+=1;
+            countDOM.innerHTML=count;
+        }
+    </script>
+</body>
+</html>
