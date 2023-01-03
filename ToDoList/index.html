@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <style>
+        body{
+            background-color: rgb(125, 206, 160);
+        }
+        .main{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+        img{
+            position: relative;
+        }
+        h1{
+            position: absolute;
+            top: 120px;
+            left: 640px;
+            color: cornsilk;
+            font-style: italic;
+        }
+        .listInputs{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            padding:5px;
+            margin: 5px;
+        }
+        .in{
+            width: 200px;
+            height: 20px;
+            border-radius: 20px;
+        }
+        .add{
+            background-color: lightblue;
+            border-radius: 20px;
+            width: 50px;
+            height: 25px;
+        }
+        .del{
+            background-color: rgb(236, 112, 99);
+            border-radius: 20px;
+            width: 50px;
+            height: 25px;
+        }
+        .listItems{
+            display: block;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .items{
+            display: inline-block;
+        }
+        li{
+            background-color: rgb(22, 160, 133);
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://img.freepik.com/free-photo/empty-blackboard_53876-31358.jpg?w=1060&t=st=1672763410~exp=1672764010~hmac=bd76ab4a71efe30a8bc0e0917d5c1ab617e63fa926967e42b411663b6b48d573" alt="" height="300px" width="600px">
+        <h1>Yapilacaklar Listesi</h1>
+    </div>
+    <div class="listInputs">
+        <input class="in" type="text">
+        <button class="add">ekle</button>
+        <button class="del">sil</button>
+    </div>
+    <div class="listItems">
+        <ul class="items">
+
+        </ul>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="toDoList.js"></script>
+</body>
+</html>
